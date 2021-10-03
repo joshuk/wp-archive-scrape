@@ -20,7 +20,7 @@ const regexEscape = (string) => {
 
   // Build the basic stuff that we need from the args
   const searchUrl = `${arguments.d}/wp-content/uploads/*`
-  const outputFolder = arguments.o ? `./${arguments.o}` : './wp-content'
+  const outputFolder = arguments.o ? `./${arguments.o}` : './wp-uploads'
   const apiUrl = `https://web.archive.org/cdx/search/cdx?url=${searchUrl}&output=json&limit=1000`
 
   const response = await axios.get(apiUrl)
